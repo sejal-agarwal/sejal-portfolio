@@ -1,26 +1,112 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #FADCD9;
+  --color-secondary: #F8AFA6;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-sans: var(--font-urbanist), ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Figma font weight mapping */
+/* 400 = Regular */
+/* 500 = Medium */
+/* 600 = Semi-Bold */
+/* 700 = Bold */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+
+  /* Font Styles */
+  .text-nav-link {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .text-nav-first-name {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .text-nav-last-name {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .text-section-heading {
+    font-size: 45px;
+    font-weight: 500;
+  }
+
+  .text-section-subheading {
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .text-bold-subheading {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .text-date-medium {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .text-date-small {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .text-italic-small {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .text-italic-medium {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* Underline Styles */
+  
+  .hover-underline-secondary {
+    position: relative;
+    padding-bottom: 4px;
+  }
+  .hover-underline-secondary::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    @apply bg-secondary opacity-0 transition-opacity duration-200;
+  }
+  .hover-underline-secondary:hover::after {
+    @apply opacity-100;
+  }
+
+  .active-underline-secondary {
+    position: relative;
+    padding-bottom: 4px;
+  }
+  .active-underline-secondary::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    @apply bg-secondary opacity-100;
+  }
 }
