@@ -46,7 +46,7 @@
 
   .text-section-subheading {
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
   }
 
@@ -78,7 +78,7 @@
   }
 
   /* Underline Styles */
-  
+
   .hover-underline-secondary {
     position: relative;
     padding-bottom: 4px;

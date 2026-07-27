@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -15,12 +15,24 @@ const navLinks = [
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const pathname = usePathname();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <>
-            <header className="w-full px-6 pt-6">
-                <nav className="w-full flex items-center justify-between bg-primary px-8 py-5 rounded-2xl shadow-sm">
+            <header className="w-full px-6 pt-5 sticky top-0 z-50">
+                <nav className={`w-full flex items-center justify-between bg-primary px-8 py-5 rounded-2xl transition-shadow duration-300 ${isScrolled
+                        ? "shadow-[0_-4px_6px_-2px_rgba(0,0,0,0.1),0_4px_6px_-2px_rgba(0,0,0,0.1)]"
+                        : "shadow-sm"
+                    }`}>
 
                     {/* Brand Logo */}
                     <Link
