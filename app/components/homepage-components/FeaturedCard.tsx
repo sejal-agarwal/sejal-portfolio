@@ -70,7 +70,8 @@ export function FeaturedCard() {
                     {" "}
                     <Link
                       href={item.link}
-                      className="font-semibold italic text-black hover-underline-secondary inline-block pb-[1px]"
+                      className="font-semibold italic text-black hover-underline-secondary inline-block"
+                      style={{ paddingBottom: "1px" }}
                     >
                       Read here.
                     </Link>

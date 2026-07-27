@@ -12,10 +12,10 @@ export default function HomePage() {
 
         <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-12 gap-5 w-full">
 
-          <div className="md:col-span-7 w-full">
+          <div className="md:col-span-7 w-full h-full">
             <HeroCard />
           </div>
-          <div className="md:col-span-5 w-full">
+          <div className="md:col-span-5 w-full h-full">
             <IllustrationCard />
           </div>
 
