@@ -26,6 +26,14 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Helper to scroll to top if already on home page
+    const handleLinkClick = (href: string) => {
+        if (href === "/" && pathname === "/") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+        setIsOpen(false);
+    };
+
     return (
         <>
             <header className="w-full px-6 pt-5 sticky top-0 z-50">
@@ -37,6 +45,7 @@ export default function Navbar() {
                     {/* Brand Logo */}
                     <Link
                         href="/"
+                        onClick={() => handleLinkClick("/")}
                         className="flex items-center gap-2 text-black shrink-0 hover:opacity-80 transition-opacity"
                     >
                         <span className="text-nav-first-name">SEJAL</span>
@@ -52,6 +61,7 @@ export default function Navbar() {
                                 <Link
                                     key={link.label}
                                     href={link.href}
+                                    onClick={() => handleLinkClick(link.href)}
                                     className={`text-nav-link text-black ${isActive
                                         ? "active-underline-secondary font-medium"
                                         : "hover-underline-secondary"
@@ -99,7 +109,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-between pb-6 border-b border-black/10">
                         <Link
                             href="/"
-                            onClick={() => setIsOpen(false)}
+                            onClick={() => handleLinkClick("/")}
                             className="flex items-center gap-2 text-black"
                         >
                             <span className="text-nav-first-name">SEJAL</span>
@@ -126,7 +136,7 @@ export default function Navbar() {
                                 <Link
                                     key={link.label}
                                     href={link.href}
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={() => handleLinkClick(link.href)}
                                     className={`text-nav-link text-black w-fit ${isActive ? "active-underline-secondary font-medium" : ""
                                         }`}
                                 >

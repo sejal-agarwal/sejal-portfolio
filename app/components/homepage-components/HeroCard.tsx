@@ -18,7 +18,7 @@ export function HeroCard() {
         />
       </div>
 
-      <h1 className="text-[36px] sm:text-[44px] lg:text-[56px] leading-[1.05] font-semibold text-black tracking-tight mt-auto">
+      <h1 className="text-[44px] md:text-[48px] lg:text-[56px] leading-[1.05] font-semibold text-black tracking-tight mt-auto">
         Developer Building{" "}
         <span className="font-light italic">Systems</span> with{" "}
         Human-Centered Design
