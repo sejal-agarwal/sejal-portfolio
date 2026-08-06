@@ -19,7 +19,7 @@ export function WorkCard({
     <BentoCard
       bgColor={bgColor}
       colSpan="col-span-1 md:col-span-6 lg:col-span-3"
-      className="rounded-[20px] h-[357px] p-8 flex flex-col justify-start gap-4"
+      className="rounded-[20px] h-[357px] lg:h-full lg:min-h-0 p-8 flex flex-col justify-start gap-4"
     >
       {/* Company Name */}
       <h3 className="text-[25px] leading-tight font-normal tracking-wide uppercase text-black">
@@ -37,7 +37,7 @@ export function WorkCard({
       </div>
 
       {/* Description */}
-      <p className="text-[20px] text-italic-medium pt-1">
+      <p className="text-italic-medium pt-1">
         {description}
       </p>
     </BentoCard>

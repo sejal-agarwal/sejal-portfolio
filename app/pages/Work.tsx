@@ -57,29 +57,25 @@ export function Work() {
   return (
     <section 
       id="work" 
-      className="w-full flex flex-col gap-5 pt-16 px-6 scroll-mt-12"
+      className="w-full flex flex-col gap-5 pt-16 lg:pt-6 px-6 scroll-mt-12 lg:scroll-mt-[90px] lg:h-[calc(100svh-90px)]"
     >
-      {/* Section Header */}
       <h2 className="text-section-heading text-black">Work</h2>
 
-      {/* Main 12-column grid */}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-5">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-12 lg:grid-rows-2 gap-5 lg:flex-1 lg:min-h-0">
         {/* Laptop Illustration */}
-        <div className="lg:col-span-6 w-full">
+        <div className="lg:col-span-6 w-full lg:h-full min-h-0">
           <WorkIllustrationCard />
         </div>
 
-        {/* First 2 Cards */}
-        <div className="lg:col-span-3 w-full">
+        <div className="lg:col-span-3 w-full lg:h-full min-h-0">
           <WorkCard {...workExperience[0]} />
         </div>
-        <div className="lg:col-span-3 w-full">
+        <div className="lg:col-span-3 w-full lg:h-full min-h-0">
           <WorkCard {...workExperience[1]} />
         </div>
 
-        {/* Row 2 Cards */}
         {workExperience.slice(2, 6).map((exp, idx) => (
-          <div key={idx} className="lg:col-span-3 w-full">
+          <div key={idx} className="lg:col-span-3 w-full lg:h-full min-h-0">
             <WorkCard {...exp} />
           </div>
         ))}
