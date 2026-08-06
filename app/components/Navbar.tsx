@@ -16,8 +16,10 @@ const navLinks = [
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [activeSection, setActiveSection] = useState("/");
     const pathname = usePathname();
 
+    // Scroll shadow state
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
@@ -26,12 +28,70 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Helper to scroll to top if already on home page
-    const handleLinkClick = (href: string) => {
-        if (href === "/" && pathname === "/") {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+    useEffect(() => {
+        if (pathname !== "/") {
+            setActiveSection(pathname);
+            return;
         }
+
+        const sectionIds = navLinks
+            .filter((link) => link.href.startsWith("#"))
+            .map((link) => link.href.replace("#", ""));
+
+        const observerOptions = {
+            root: null,
+            rootMargin: "-20% 0px -60% 0px",
+            threshold: 0,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(`#${entry.target.id}`);
+                }
+            });
+        }, observerOptions);
+
+        sectionIds.forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el);
+        });
+
+        // Reset to home '/' if scrolled near the top
+        const handleTopReset = () => {
+            if (window.scrollY < 150) {
+                setActiveSection("/");
+            }
+        };
+
+        window.addEventListener("scroll", handleTopReset);
+
+        return () => {
+            observer.disconnect();
+            window.removeEventListener("scroll", handleTopReset);
+        };
+    }, [pathname]);
+
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         setIsOpen(false);
+
+        if (href === "/" && pathname === "/") {
+            e.preventDefault();
+            setActiveSection("/");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            return;
+        }
+
+        if (href.startsWith("#")) {
+            e.preventDefault();
+            setActiveSection(href);
+            const targetId = href.replace("#", "");
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        }
     };
 
     return (
@@ -45,7 +105,7 @@ export default function Navbar() {
                     {/* Brand Logo */}
                     <Link
                         href="/"
-                        onClick={() => handleLinkClick("/")}
+                        onClick={(e) => handleLinkClick(e, "/")}
                         className="flex items-center gap-2 text-black shrink-0 hover:opacity-80 transition-opacity"
                     >
                         <span className="text-nav-first-name">SEJAL</span>
@@ -55,13 +115,13 @@ export default function Navbar() {
                     {/* Desktop Navigation Links */}
                     <div className="hidden lg:flex items-center gap-8">
                         {navLinks.map((link) => {
-                            const isActive = pathname === link.href;
+                            const isActive = activeSection === link.href;
 
                             return (
                                 <Link
                                     key={link.label}
                                     href={link.href}
-                                    onClick={() => handleLinkClick(link.href)}
+                                    onClick={(e) => handleLinkClick(e, link.href)}
                                     className={`text-nav-link text-black ${isActive
                                         ? "active-underline-secondary font-medium"
                                         : "hover-underline-secondary"
@@ -93,7 +153,6 @@ export default function Navbar() {
             </header>
 
             {/* Mobile Side Drawer Panel */}
-
             <div
                 onClick={() => setIsOpen(false)}
                 className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 lg:hidden ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -109,7 +168,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-between pb-6 border-b border-black/10">
                         <Link
                             href="/"
-                            onClick={() => handleLinkClick("/")}
+                            onClick={(e) => handleLinkClick(e, "/")}
                             className="flex items-center gap-2 text-black"
                         >
                             <span className="text-nav-first-name">SEJAL</span>
@@ -130,13 +189,13 @@ export default function Navbar() {
                     {/* Vertical Menu Links in Mobile Drawer */}
                     <div className="flex flex-col gap-6 pt-8">
                         {navLinks.map((link) => {
-                            const isActive = pathname === link.href;
+                            const isActive = activeSection === link.href;
 
                             return (
                                 <Link
                                     key={link.label}
                                     href={link.href}
-                                    onClick={() => handleLinkClick(link.href)}
+                                    onClick={(e) => handleLinkClick(e, link.href)}
                                     className={`text-nav-link text-black w-fit ${isActive ? "active-underline-secondary font-medium" : ""
                                         }`}
                                 >
