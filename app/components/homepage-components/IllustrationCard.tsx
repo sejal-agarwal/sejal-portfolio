@@ -6,7 +6,7 @@ export function IllustrationCard() {
     <BentoCard
       bgColor="bg-primary"
       colSpan="col-span-1 lg:col-span-3"
-      className="rounded-[20px] min-h-[476px] h-full relative overflow-hidden flex flex-col justify-center items-center p-6"
+      className="rounded-[20px] min-h-[476px] lg:min-h-0 h-full relative overflow-hidden flex flex-col justify-center items-center p-6"
     >
       <div className="relative w-full h-full min-h-[350px] flex items-center justify-center">
         <Image

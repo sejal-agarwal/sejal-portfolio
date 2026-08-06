@@ -37,7 +37,7 @@ export function FeaturedCard() {
     <BentoCard
       bgColor="bg-primary"
       colSpan="col-span-1"
-      className="rounded-[20px] flex-1 h-full flex flex-col justify-between p-6 overflow-hidden"
+      className="rounded-[20px] h-full min-h-0 flex flex-col justify-between p-6 overflow-hidden"
     >
       <div>
         <h2 className="text-section-subheading tracking-tight">
@@ -50,7 +50,7 @@ export function FeaturedCard() {
             alt="Tulip line drawing"
             width={160}
             height={190}
-            className="object-contain"
+            className="object-contain lg:w-[105px] lg:h-[125px]"
           />
         </div>
       </div>

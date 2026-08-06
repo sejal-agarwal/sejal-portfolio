@@ -6,7 +6,7 @@ export function HeroCard() {
     <BentoCard
       bgColor="bg-primary"
       colSpan="lg:col-span-5"
-      className="rounded-[20px] min-h-[476px] h-full p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden"
+      className="rounded-[20px] min-h-[476px] lg:min-h-0 h-full p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden"
     >
       <div className="self-end">
         <Image
@@ -18,7 +18,7 @@ export function HeroCard() {
         />
       </div>
 
-      <h1 className="text-[44px] md:text-[48px] lg:text-[56px] leading-[1.05] font-semibold text-black tracking-tight mt-auto">
+      <h1 className="text-[40px] md:text-[44px] lg:text-[clamp(38px,2.5vw,48px)] leading-[1.05] font-semibold text-black tracking-tight mt-auto">
         Developer Building{" "}
         <span className="font-light italic">Systems</span> with{" "}
         Human-Centered Design

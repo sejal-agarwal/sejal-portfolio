@@ -6,7 +6,7 @@ export function AboutCard() {
     <BentoCard
       bgColor="bg-primary"
       colSpan="w-full"
-      className="rounded-[20px] pt-[32px] pl-[24px] pb-[25px] pr-[93px] h-[351px] flex flex-col justify-between"
+      className="rounded-[20px] pt-[32px] pl-[24px] pb-[25px] pr-[93px] h-[351px] lg:h-full flex flex-col justify-between"
     >
       <div>
         <Image

@@ -6,7 +6,7 @@ export function QuickLinksCard() {
     <BentoCard
       bgColor="bg-primary"
       colSpan="col-span-1"
-      className="rounded-[20px] h-[101px] px-8 flex flex-row items-center justify-between shrink-0"
+      className="rounded-[20px] h-[101px] lg:h-[88px] px-8 flex flex-row items-center justify-between shrink-0"
     >
       <Link
         href="/resume.pdf"

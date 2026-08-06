@@ -5,9 +5,11 @@ import { Work } from "./pages/Work";
 export default function Home() {
   return (
     <>
-    <Navbar />
-    <HomePage />
-    <Work />
+      <Navbar />
+      <div className="min-h-[calc(100svh-90px)] lg:h-[calc(100svh-90px)] flex flex-col">
+        <HomePage />
+      </div>
+      <Work />
     </>
   );
 }
