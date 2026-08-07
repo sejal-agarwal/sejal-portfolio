@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/Homepage";
+import { Research } from "./pages/Research";
 import { Work } from "./pages/Work";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         <HomePage />
       </div>
       <Work />
+      <Research />
     </>
   );
 }

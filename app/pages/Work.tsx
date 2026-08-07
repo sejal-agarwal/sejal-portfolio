@@ -8,7 +8,7 @@ const workExperience = [
     role: "Software Engineer Co-op",
     dates: "September 2024 - December 2024",
     description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement and sign-ups.",
+      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
     bgColor: "bg-secondary" as const,
   },
   {
@@ -16,7 +16,7 @@ const workExperience = [
     role: "Software Engineer Co-op",
     dates: "September 2024 - December 2024",
     description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement and sign-ups.",
+      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
     bgColor: "bg-primary" as const,
   },
   {
@@ -24,7 +24,7 @@ const workExperience = [
     role: "Software Engineer Co-op",
     dates: "September 2024 - December 2024",
     description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement and sign-ups.",
+      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
     bgColor: "bg-secondary" as const,
   },
   {
@@ -32,7 +32,7 @@ const workExperience = [
     role: "Software Engineer Co-op",
     dates: "September 2024 - December 2024",
     description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement and sign-ups.",
+      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
     bgColor: "bg-primary" as const,
   },
   {
@@ -40,7 +40,7 @@ const workExperience = [
     role: "Software Engineer Co-op",
     dates: "September 2024 - December 2024",
     description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement and sign-ups.",
+      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
     bgColor: "bg-secondary" as const,
   },
   {
@@ -48,7 +48,7 @@ const workExperience = [
     role: "Software Engineer Co-op",
     dates: "September 2024 - December 2024",
     description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement and sign-ups.",
+      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
     bgColor: "bg-primary" as const,
   },
 ];
