@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/Homepage";
+import { Projects } from "./pages/Projects";
 import { Research } from "./pages/Research";
 import { Work } from "./pages/Work";
 
@@ -12,6 +13,7 @@ export default function Home() {
       </div>
       <Work />
       <Research />
+      <Projects />
     </>
   );
 }

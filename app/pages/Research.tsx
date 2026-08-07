@@ -12,7 +12,7 @@ export function Research() {
   return (
     <section
       id="research"
-      className="w-full px-6 py-6 scroll-mt-12 lg:scroll-mt-[90px] lg:h-[calc(100svh-90px)]"
+      className="w-full px-6 py-6 lg:pt-8 lg:pb-2 scroll-mt-12 lg:scroll-mt-[90px] lg:h-[calc(100svh-90px)]"
     >
       <div className="w-full h-full rounded-[20px] bg-primary p-6 lg:p-8 flex flex-col gap-5 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 lg:flex-[0.9] min-h-0">
@@ -39,10 +39,10 @@ export function Research() {
           </div>
         </div>
 
-        <div className="h-[2px] bg-black shrink-0" />
+        <div className="h-[2px] bg-black shrink-0 " />
 
         <div className="flex flex-col gap-4 lg:flex-[1.1] min-h-0">
-          <h3 className="text-[20px] font-normal uppercase shrink-0">
+          <h3 className="text-section-subheading">
             Research Projects
           </h3>
 
