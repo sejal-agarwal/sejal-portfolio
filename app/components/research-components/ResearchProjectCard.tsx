@@ -18,7 +18,7 @@ export function ResearchProjectCard({
       href={href}
       target="_blank"
       aria-label={`Open ${title} PDF`}
-      className="group relative isolate w-full max-w-[220px] h-[270px] lg:h-full lg:max-h-[250px] transition-transform duration-200 hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
+      className="reveal-card group relative isolate w-full max-w-[220px] h-[270px] lg:h-full lg:max-h-[250px] transition-transform duration-200 hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
     >
       <span
         aria-hidden="true"

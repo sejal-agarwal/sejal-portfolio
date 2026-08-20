@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Urbanist } from 'next/font/google';
+import { ScrollReveal } from "./components/ScrollReveal";
 
 const urbanist = Urbanist({
   subsets: ['latin'],
@@ -11,7 +12,10 @@ const urbanist = Urbanist({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={urbanist.variable}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        {children}
+        <ScrollReveal />
+      </body>
     </html>
   );
 }

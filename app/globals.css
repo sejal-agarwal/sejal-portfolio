@@ -21,6 +21,40 @@ html {
   }
 }
 
+.reveal-ready .reveal-card {
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+}
+
+.reveal-ready .reveal-card.is-revealed {
+  opacity: 1;
+  transform: none;
+  animation: reveal-card 900ms cubic-bezier(0.22, 1.25, 0.36, 1) var(--reveal-delay, 0ms) backwards;
+}
+
+@keyframes reveal-card {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.005);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-card {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
 /* Figma font weight mapping */
 /* 400 = Regular */
 /* 500 = Medium */

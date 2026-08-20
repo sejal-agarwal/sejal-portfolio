@@ -42,7 +42,7 @@ export function Contact() {
             key={link.label}
             href={link.href}
             target={link.href.startsWith("http") || link.href.endsWith(".pdf") ? "_blank" : undefined}
-            className="group flex items-center gap-2 w-fit text-section-subheading hover-underline-primary"
+            className="reveal-card group flex items-center gap-2 w-fit text-section-subheading hover-underline-primary"
           >
             <Image
               src={link.icon}

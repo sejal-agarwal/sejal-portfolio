@@ -17,7 +17,7 @@ export const BentoCard: React.FC<BentoCardProps> = ({
 }) => {
   return (
     <div
-      className={`rounded-3xl p-6 lg:p-8 flex flex-col justify-between overflow-hidden transition-all duration-300 ${bgColor} ${colSpan} ${rowSpan} ${className}`}
+      className={`reveal-card rounded-3xl p-6 lg:p-8 flex flex-col justify-between overflow-hidden transition-all duration-300 ${bgColor} ${colSpan} ${rowSpan} ${className}`}
     >
       {children}
     </div>

@@ -29,7 +29,7 @@ export function Blog() {
         <h2 className="text-section-heading shrink-0">Blog</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 flex-1 min-h-0">
-          <div className="lg:col-span-3 min-h-[280px] lg:min-h-0 rounded-[20px] bg-secondary relative overflow-hidden">
+          <div className="reveal-card lg:col-span-3 min-h-[280px] lg:min-h-0 rounded-[20px] bg-secondary relative overflow-hidden">
             <Image
               src="/open book.svg"
               alt="Line drawing of an open book"
@@ -38,7 +38,7 @@ export function Blog() {
             />
           </div>
 
-          <div className="lg:col-span-6 rounded-[20px] bg-secondary p-6 flex flex-col gap-4 min-h-0">
+          <div className="reveal-card lg:col-span-6 rounded-[20px] bg-secondary p-6 flex flex-col gap-4 min-h-0">
             <h3 className="text-section-subheading shrink-0">Most Recent</h3>
 
             <div className="grid gap-4 min-h-0">
@@ -52,7 +52,7 @@ export function Blog() {
             </Button>
           </div>
 
-          <div className="lg:col-span-3 min-h-[280px] lg:min-h-0 rounded-[20px] bg-secondary relative overflow-hidden">
+          <div className="reveal-card lg:col-span-3 min-h-[280px] lg:min-h-0 rounded-[20px] bg-secondary relative overflow-hidden">
             <Image
               src="/plant.svg"
               alt="Line drawing of a leafy plant"
