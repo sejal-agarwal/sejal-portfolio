@@ -4,52 +4,44 @@ import { WorkIllustrationCard } from "../components/work-components/WorkIllustra
 
 const workExperience = [
   {
-    company: "OUTSCHOOL",
-    role: "Software Engineer Co-op",
-    dates: "September 2024 - December 2024",
+    company: "Outschool",
+    role: "Software Engineer Intern",
+    dates: "January - April 2024, September - December 2024",
     description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
+      "Designed and shipped A/B-tested onboarding experiences that increased new-buyer engagement and sign-ups by 25%.",
     bgColor: "bg-secondary" as const,
   },
   {
-    company: "OUTSCHOOL",
+    company: "Open Ocean Robotics",
     role: "Software Engineer Co-op",
-    dates: "September 2024 - December 2024",
+    dates: "May - August 2023",
     description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
+      "Migrated a 60,000 LOC from JavaScript to TypeScript and built a responsive image carousel which reduced live-streaming costs by 20%.",
     bgColor: "bg-primary" as const,
   },
   {
-    company: "OUTSCHOOL",
-    role: "Software Engineer Co-op",
-    dates: "September 2024 - December 2024",
+    company: "Respondent",
+    role: "Software Engineer Intern",
+    dates: "September - December 2022",
     description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
+      "Refactored 20% of an Angular application, removed legacy front-end code, shipped five user-facing features, and improved reliability through automated testing.",
     bgColor: "bg-secondary" as const,
   },
   {
-    company: "OUTSCHOOL",
-    role: "Software Engineer Co-op",
-    dates: "September 2024 - December 2024",
+    company: "19LABS",
+    role: "Full-Stack Developer Co-op",
+    dates: "January - April 2022",
     description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
+      "Improved the GALE telehealth platform by simplifying seven permission roles into four, redesigning authentication flows, and integrating Bluetooth medical-device data.",
     bgColor: "bg-primary" as const,
   },
   {
-    company: "OUTSCHOOL",
-    role: "Software Engineer Co-op",
-    dates: "September 2024 - December 2024",
+    company: "HIGHWAY THREE SOLUTIONS",
+    role: "Junior Technical Analyst",
+    dates: "May - August 2021",
     description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
+      "Researched and tested Atlassian Server-to-Cloud migration journeys, translated findings into technical blog posts, and partnered across engineering, consulting, and marketing.",
     bgColor: "bg-secondary" as const,
-  },
-  {
-    company: "OUTSCHOOL",
-    role: "Software Engineer Co-op",
-    dates: "September 2024 - December 2024",
-    description:
-      "Designed and ran A/B tests on core onboarding flows and built interactive analytics dashboards, driving a 20% lift in new buyer engagement.",
-    bgColor: "bg-primary" as const,
   },
 ];
 
@@ -74,8 +66,11 @@ export function Work() {
           <WorkCard {...workExperience[1]} />
         </div>
 
-        {workExperience.slice(2, 6).map((exp, idx) => (
-          <div key={idx} className="lg:col-span-3 w-full lg:h-full min-h-0">
+        {workExperience.slice(2).map((exp, idx, remainingExperience) => (
+          <div
+            key={exp.company}
+            className={`${idx === remainingExperience.length - 1 ? "lg:col-span-6" : "lg:col-span-3"} w-full lg:h-full min-h-0`}
+          >
             <WorkCard {...exp} />
           </div>
         ))}

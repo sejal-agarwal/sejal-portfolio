@@ -7,6 +7,7 @@ interface FeaturedItemProps {
   description: string;
   date: string;
   link?: string;
+  linkText?: string;
 }
 
 const featuredItems: FeaturedItemProps[] = [
@@ -15,21 +16,23 @@ const featuredItems: FeaturedItemProps[] = [
     description:
       "First author paper on facilitating the building of user interfaces with AI chatbots using questions.",
     date: "June 2026",
-    link: "#",
+    link: "https://cs.uwaterloo.ca/~dvogel/gi2026/papers/1076b.pdf",
+    linkText: "Read here.",
   },
   {
-    title: "Paper Accepted at Graphics Interface Conference '26",
+    title: "Otter: RAG chatbot + anonymized, aggregated data",
     description:
-      "First author paper on facilitating the building of user interfaces with AI chatbots using questions.",
+      "I'm building Otter, a RAG chatbot for students providing and an anonymized, aggregated dashboard.",
     date: "June 2026",
-    link: "#",
+    link: "https://github.com/sejal-agarwal/otter",
+    linkText: "Learn more.",
   },
-  {
-    title: "Paper Accepted at Graphics Interface Conference '26",
-    description:
-      "First author paper on facilitating the building of user interfaces with AI chatbots using questions.",
-    date: "June 2026",
-  },
+  // {
+  //   title: "Paper Accepted at Graphics Interface Conference '26",
+  //   description:
+  //     "First author paper on facilitating the building of user interfaces with AI chatbots using questions.",
+  //   date: "June 2026",
+  // },
 ];
 
 export function FeaturedCard() {
@@ -71,8 +74,10 @@ export function FeaturedCard() {
                     <Link
                       href={item.link}
                       className="font-semibold italic text-black hover-underline-secondary inline-block pb-[1px]"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Read here.
+                      {item.linkText}
                     </Link>
                   </>
                 )}

@@ -18,7 +18,7 @@ export function Research() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 lg:flex-[0.9] min-h-0">
           <div className="lg:col-span-7 flex flex-col">
             <h2 className="text-section-heading text-black">Research</h2>
-            <p className="mt-5 max-w-[760px] text-[18px] lg:text-[clamp(15px,1.35vw,21px)] leading-[1.5] text-black">
+            <p className="mt-5 max-w-[760px] text-[20px] font-light leading-[25px] text-black">
               My research interests lie at the intersection of human-computer
               interaction (HCI), AI, and educational technology. As a student in the
               Insight Lab, supervised by Dr. Ana Crisan, I study how AI-driven systems

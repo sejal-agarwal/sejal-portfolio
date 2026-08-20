@@ -22,7 +22,7 @@ const contactLinks = [
   },
   {
     label: "Resume",
-    href: "/resume.pdf",
+    href: "/pdfs/sejal-agarwal-resume.pdf",
     icon: "/paper-clip.svg",
     iconSize: 28,
   },

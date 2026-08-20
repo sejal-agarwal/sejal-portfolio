@@ -9,7 +9,7 @@ export function QuickLinksCard() {
       className="rounded-[20px] h-[101px] lg:h-[88px] px-8 flex flex-row items-center justify-between shrink-0"
     >
       <Link
-        href="/resume.pdf"
+        href="/pdfs/sejal-agarwal-resume.pdf"
         target="_blank"
         className="text-[15px] font-normal tracking-wide text-black hover-underline-secondary transition-all"
       >
