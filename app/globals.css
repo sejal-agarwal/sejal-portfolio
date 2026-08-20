@@ -11,6 +11,16 @@
   --font-sans: var(--font-urbanist), ui-sans-serif, system-ui, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* Figma font weight mapping */
 /* 400 = Regular */
 /* 500 = Medium */

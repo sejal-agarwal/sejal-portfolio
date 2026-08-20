@@ -44,7 +44,16 @@ export default function Navbar() {
             threshold: 0,
         };
 
+        const isAtPageBottom = () =>
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 2;
+
         const observer = new IntersectionObserver((entries) => {
+            if (isAtPageBottom()) {
+                setActiveSection("#contact");
+                return;
+            }
+
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     setActiveSection(`#${entry.target.id}`);
@@ -57,18 +66,21 @@ export default function Navbar() {
             if (el) observer.observe(el);
         });
 
-        // Reset to home '/' if scrolled near the top
-        const handleTopReset = () => {
+        // Keep the boundary sections active even when they cannot reach the
+        // observer's activation area.
+        const handleScrollBoundary = () => {
             if (window.scrollY < 150) {
                 setActiveSection("/");
+            } else if (isAtPageBottom()) {
+                setActiveSection("#contact");
             }
         };
 
-        window.addEventListener("scroll", handleTopReset);
+        window.addEventListener("scroll", handleScrollBoundary);
 
         return () => {
             observer.disconnect();
-            window.removeEventListener("scroll", handleTopReset);
+            window.removeEventListener("scroll", handleScrollBoundary);
         };
     }, [pathname]);
 

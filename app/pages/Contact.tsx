@@ -5,25 +5,25 @@ const contactLinks = [
   {
     label: "Email",
     href: "mailto:",
-    icon: "/iconamoon_email-thin.svg",
+    icon: "/email.svg",
     iconSize: 28,
   },
   {
     label: "GitHub",
     href: "https://github.com/sejal-agarwal",
-    icon: "/Vector.svg",
+    icon: "/github.svg",
     iconSize: 27,
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/sejal-agarwal21/",
-    icon: "/mdi_linkedin.svg",
+    icon: "/linkedin.svg",
     iconSize: 32,
   },
   {
     label: "Resume",
     href: "/resume.pdf",
-    icon: "/heroicons_paper-clip.svg",
+    icon: "/paper-clip.svg",
     iconSize: 28,
   },
 ];
@@ -36,7 +36,7 @@ export function Contact() {
     >
       <h2 className="text-section-heading">Contact</h2>
 
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 lg:gap-10">
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-7 lg:flex lg:items-center lg:justify-between">
         {contactLinks.map((link) => (
           <Link
             key={link.label}

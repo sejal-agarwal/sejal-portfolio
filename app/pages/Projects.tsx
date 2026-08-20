@@ -23,11 +23,11 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="w-full px-6 pt-6 pb-6 flex flex-col gap-6 scroll-mt-12 lg:scroll-mt-[90px] lg:h-[calc(100svh-90px)]"
+      className="w-full px-6 pt-6 pb-2 flex flex-col gap-6 scroll-mt-12 lg:scroll-mt-[90px] lg:h-[calc(100svh-90px)]"
     >
       <h2 className="text-section-heading text-black shrink-0">Projects</h2>
 
-      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-5 lg:flex-1 lg:min-h-0 lg:max-h-[460px]">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-5 lg:flex-1 lg:min-h-0">
         <div className="lg:col-span-5 h-[320px] lg:h-full min-h-0">
           <BentoCard
             bgColor="bg-primary"
