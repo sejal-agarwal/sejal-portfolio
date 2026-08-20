@@ -1,4 +1,6 @@
 import Navbar from "./components/Navbar";
+import { Blog } from "./pages/Blog";
+import { Contact } from "./pages/Contact";
 import HomePage from "./pages/Homepage";
 import { Projects } from "./pages/Projects";
 import { Research } from "./pages/Research";
@@ -14,6 +16,10 @@ export default function Home() {
       <Work />
       <Research />
       <Projects />
+      <div className="min-h-[calc(100svh-90px)] flex flex-col">
+        <Blog />
+      </div>
+      <Contact />
     </>
   );
 }

@@ -60,6 +60,11 @@
     font-weight: 400;
   }
 
+  .dates-subheading {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
   .text-date-small {
     font-size: 14px;
     font-weight: 400;
@@ -93,6 +98,23 @@
     @apply bg-secondary opacity-0 transition-opacity duration-200;
   }
   .hover-underline-secondary:hover::after {
+    @apply opacity-100;
+  }
+
+  .hover-underline-primary {
+    position: relative;
+    padding-bottom: 4px;
+  }
+  .hover-underline-primary::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    @apply bg-primary opacity-0 transition-opacity duration-200;
+  }
+  .hover-underline-primary:hover::after {
     @apply opacity-100;
   }
 
