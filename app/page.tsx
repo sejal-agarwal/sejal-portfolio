@@ -16,9 +16,7 @@ export default function Home() {
       <Work />
       <Research />
       <Projects />
-      <div className="min-h-[calc(100svh-90px)] flex flex-col">
-        <Blog />
-      </div>
+      <Blog />
       <Contact />
     </>
   );

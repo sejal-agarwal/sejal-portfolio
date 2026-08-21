@@ -9,7 +9,7 @@ export function Blog() {
   return (
     <section
       id="blog"
-      className="w-full px-6 pt-6 pb-4 flex-1 min-h-0 scroll-mt-12 lg:scroll-mt-[90px]"
+      className="w-full px-6 pt-6 pb-4 scroll-mt-12 lg:scroll-mt-[90px] lg:h-[calc(100svh-90px)]"
     >
       <div className="w-full h-full min-h-[680px] lg:min-h-0 rounded-[20px] bg-primary p-6 lg:p-8 flex flex-col gap-6 overflow-hidden">
         <h2 className="text-section-heading shrink-0">Blog</h2>

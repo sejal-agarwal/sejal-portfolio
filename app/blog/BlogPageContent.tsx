@@ -141,7 +141,7 @@ export function BlogPageContent({ posts, initialSlug }: BlogPageContentProps) {
                       width={1200}
                       height={800}
                       unoptimized
-                      className="my-8 h-auto w-full rounded-[20px] object-contain"
+                      className="mx-auto my-8 h-auto w-full max-w-[700px] rounded-[20px] object-contain"
                     />
                   ),
                 }}
