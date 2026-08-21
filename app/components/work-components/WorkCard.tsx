@@ -1,6 +1,6 @@
 import { BentoCard } from "../BentoCard";
 
-interface WorkCardProps {
+export interface WorkCardProps {
   company: string;
   role: string;
   dates: string;

@@ -1,8 +1,8 @@
-import { WorkCard } from "../components/work-components/WorkCard";
+import { WorkCard, type WorkCardProps } from "../components/work-components/WorkCard";
 import { WorkIllustrationCard } from "../components/work-components/WorkIllustrationcard";
 
 
-const workExperience = [
+const workExperience: WorkCardProps[] = [
   {
     company: "Outschool",
     role: "Software Engineer Intern",

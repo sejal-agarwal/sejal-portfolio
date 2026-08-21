@@ -23,7 +23,7 @@ const featuredItems: FeaturedItemProps[] = [
     title: "Otter: RAG chatbot + anonymized, aggregated data",
     description:
       "I'm building Otter, a RAG chatbot for students providing and an anonymized, aggregated dashboard.",
-    date: "June 2026",
+    date: "August 2026",
     link: "https://github.com/sejal-agarwal/otter",
     linkText: "Learn more.",
   },
@@ -53,7 +53,7 @@ export function FeaturedCard() {
             alt="Tulip line drawing"
             width={160}
             height={190}
-            className="object-contain lg:w-[105px] lg:h-[125px]"
+            className="object-contain lg:w-[145px] lg:h-[165px]"
           />
         </div>
       </div>

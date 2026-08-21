@@ -1,7 +1,7 @@
 import { BentoCard } from "../BentoCard";
 import { Button } from "../Button";
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
   title: string;
   description: string;
   href: string;
