@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { BentoCard } from "../components/BentoCard";
-import { ProjectCard, type ProjectCardProps } from "../components/project-components/ProjectCard";
+import {
+  ProjectCard,
+  type ProjectCardProps,
+} from "../components/project-components/ProjectCard";
 
 const projects: ProjectCardProps[] = [
   {

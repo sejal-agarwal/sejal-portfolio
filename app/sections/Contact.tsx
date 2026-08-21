@@ -41,7 +41,11 @@ export function Contact() {
           <Link
             key={link.label}
             href={link.href}
-            target={link.href.startsWith("http") || link.href.endsWith(".pdf") ? "_blank" : undefined}
+            target={
+              link.href.startsWith("http") || link.href.endsWith(".pdf")
+                ? "_blank"
+                : undefined
+            }
             className="reveal-card group flex items-center gap-2 w-fit text-section-subheading hover-underline-primary"
           >
             <Image

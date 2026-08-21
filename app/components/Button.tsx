@@ -5,9 +5,10 @@ interface ButtonProps {
     href: string;
     children: ReactNode;
     className?: string;
+    fitContent?: boolean;
 }
 
-export function Button({ href, children, className = "" }: ButtonProps) {
+export function Button({ href, children, className = "", fitContent = false }: ButtonProps) {
     const isExternal = href.startsWith("http://") || href.startsWith("https://");
 
     return (
@@ -15,7 +16,7 @@ export function Button({ href, children, className = "" }: ButtonProps) {
             href={href}
             target={isExternal ? "_blank" : undefined}
             rel={isExternal ? "noopener noreferrer" : undefined}
-            className={`w-full h-[60px] bg-white rounded-[20px] flex items-center justify-center text-nav-link tracking-normal transition-shadow duration-200 hover:shadow-2xl ${className}`}
+            className={`${fitContent ? "w-fit px-7" : "w-full"} h-[60px] bg-white rounded-[20px] flex items-center justify-center text-nav-link tracking-normal transition-shadow duration-200 hover:shadow-2xl ${className}`}
         >
             {children}
         </Link>

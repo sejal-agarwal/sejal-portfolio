@@ -1,25 +1,11 @@
 import Image from "next/image";
 import { BlogPostCard } from "../components/blog-components/BlogPostCard";
 import { Button } from "../components/Button";
-
-const blogPosts = [
-  {
-    title: "Blog 1",
-    date: "June 2026",
-    description:
-      "First author paper on facilitating the building of user interfaces with AI chatbots using guided questioning.",
-    href: "#",
-  },
-  {
-    title: "Blog 1",
-    date: "June 2026",
-    description:
-      "First author paper on facilitating the building of user interfaces with AI chatbots using guided questioning.",
-    href: "#",
-  },
-];
+import { getBlogPosts } from "../../lib/blog";
 
 export function Blog() {
+  const blogPosts = getBlogPosts();
+
   return (
     <section
       id="blog"
@@ -42,12 +28,18 @@ export function Blog() {
             <h3 className="text-section-subheading shrink-0">Most Recent</h3>
 
             <div className="grid gap-4 min-h-0">
-              {blogPosts.map((post, index) => (
-                <BlogPostCard key={index} {...post} />
+              {blogPosts.slice(0, 2).map((post) => (
+                <BlogPostCard
+                  key={post.slug}
+                  title={post.title}
+                  date={post.date}
+                  description={post.description}
+                  href={`/blog?post=${post.slug}`}
+                />
               ))}
             </div>
 
-            <Button href="#" className="mt-auto mx-auto max-w-[300px] shrink-0">
+            <Button href="/blog" className="mt-auto mx-auto max-w-[300px] shrink-0">
               Find More Blogs
             </Button>
           </div>

@@ -1,17 +1,17 @@
 import Navbar from "./components/Navbar";
-import { Blog } from "./pages/Blog";
-import { Contact } from "./pages/Contact";
-import HomePage from "./pages/Homepage";
-import { Projects } from "./pages/Projects";
-import { Research } from "./pages/Research";
-import { Work } from "./pages/Work";
+import { Blog } from "./sections/Blog";
+import { Contact } from "./sections/Contact";
+import HomepageSection from "./sections/Homepage";
+import { Projects } from "./sections/Projects";
+import { Research } from "./sections/Research";
+import { Work } from "./sections/Work";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <div className="min-h-[calc(100svh-90px)] lg:h-[calc(100svh-90px)] flex flex-col">
-        <HomePage />
+        <HomepageSection />
       </div>
       <Work />
       <Research />

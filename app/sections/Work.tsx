@@ -1,7 +1,5 @@
 import { WorkCard, type WorkCardProps } from "../components/work-components/WorkCard";
 import { WorkIllustrationCard } from "../components/work-components/WorkIllustrationcard";
-
-
 const workExperience: WorkCardProps[] = [
   {
     company: "Outschool",

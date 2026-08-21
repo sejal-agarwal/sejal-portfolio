@@ -5,7 +5,7 @@ import { HeroCard } from "../components/homepage-components/HeroCard";
 import { IllustrationCard } from "../components/homepage-components/IllustrationCard";
 import { QuickLinksCard } from "../components/homepage-components/QuickLinksCard";
 
-export default function HomePage() {
+export default function HomepageSection() {
   return (
     <div className="w-full flex-1 min-h-0 flex flex-col pb-2 px-6">
       <main className="w-full grid grid-cols-1 lg:grid-cols-12 gap-5 mt-5 lg:flex-1 lg:min-h-0">

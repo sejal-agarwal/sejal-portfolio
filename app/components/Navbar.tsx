@@ -30,7 +30,6 @@ export default function Navbar() {
 
     useEffect(() => {
         if (pathname !== "/") {
-            setActiveSection(pathname);
             return;
         }
 
@@ -95,6 +94,8 @@ export default function Navbar() {
         }
 
         if (href.startsWith("#")) {
+            if (pathname !== "/") return;
+
             e.preventDefault();
             setActiveSection(href);
             const targetId = href.replace("#", "");
@@ -127,12 +128,16 @@ export default function Navbar() {
                     {/* Desktop Navigation Links */}
                     <div className="hidden lg:flex items-center gap-8">
                         {navLinks.map((link) => {
-                            const isActive = activeSection === link.href;
+                            const isBlogRoute = pathname.startsWith("/blog") && link.href === "#blog";
+                            const isActive = activeSection === link.href || isBlogRoute;
+                            const linkHref = pathname !== "/" && link.href.startsWith("#")
+                                ? `/${link.href}`
+                                : link.href;
 
                             return (
                                 <Link
                                     key={link.label}
-                                    href={link.href}
+                                    href={linkHref}
                                     onClick={(e) => handleLinkClick(e, link.href)}
                                     className={`text-nav-link text-black ${isActive
                                         ? "active-underline-secondary font-medium"
@@ -201,12 +206,16 @@ export default function Navbar() {
                     {/* Vertical Menu Links in Mobile Drawer */}
                     <div className="flex flex-col gap-6 pt-8">
                         {navLinks.map((link) => {
-                            const isActive = activeSection === link.href;
+                            const isBlogRoute = pathname.startsWith("/blog") && link.href === "#blog";
+                            const isActive = activeSection === link.href || isBlogRoute;
+                            const linkHref = pathname !== "/" && link.href.startsWith("#")
+                                ? `/${link.href}`
+                                : link.href;
 
                             return (
                                 <Link
                                     key={link.label}
-                                    href={link.href}
+                                    href={linkHref}
                                     onClick={(e) => handleLinkClick(e, link.href)}
                                     className={`text-nav-link text-black w-fit ${isActive ? "active-underline-secondary font-medium" : ""
                                         }`}

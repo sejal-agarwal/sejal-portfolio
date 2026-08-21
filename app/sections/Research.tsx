@@ -62,9 +62,7 @@ export function Research() {
         </div>
 
         <div className="flex flex-col gap-4 lg:flex-[1.3] min-h-0">
-          <h3 className="text-section-subheading">
-            Research Projects
-          </h3>
+          <h3 className="text-section-subheading">Research Projects</h3>
 
           <div className="bg-secondary rounded-[20px] p-8 lg:px-[8%] lg:py-7 flex flex-wrap items-center justify-evenly gap-8 lg:gap-5 flex-1 min-h-0">
             {researchProjects.map((project, index) => (
