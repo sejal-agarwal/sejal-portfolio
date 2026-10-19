@@ -1,4 +1,3 @@
-import { withBasePath } from "@/lib/base-path";
 import Image from "next/image";
 import { BlogPostCard } from "../components/blog-components/BlogPostCard";
 import { Button } from "../components/Button";
@@ -18,7 +17,7 @@ export function Blog() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 flex-1 min-h-0">
           <div className="reveal-card lg:col-span-3 min-h-[280px] lg:min-h-0 rounded-[20px] bg-secondary relative overflow-hidden">
             <Image
-              src={withBasePath("/open book.svg")}
+              src="/open book.svg"
               alt="Line drawing of an open book"
               fill
               className="object-contain object-center"
@@ -47,7 +46,7 @@ export function Blog() {
 
           <div className="reveal-card lg:col-span-3 min-h-[280px] lg:min-h-0 rounded-[20px] bg-secondary relative overflow-hidden">
             <Image
-              src={withBasePath("/plant.svg")}
+              src="/plant.svg"
               alt="Line drawing of a leafy plant"
               fill
               className="object-contain object-center p-5"

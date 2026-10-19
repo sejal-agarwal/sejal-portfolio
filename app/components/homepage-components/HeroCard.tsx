@@ -1,4 +1,3 @@
-import { withBasePath } from "@/lib/base-path";
 import { BentoCard } from "../BentoCard";
 import Image from "next/image";
 
@@ -11,7 +10,7 @@ export function HeroCard() {
     >
       <div className="self-end">
         <Image
-          src={withBasePath("/flower-line.svg")}
+          src="/flower-line.svg"
           alt="Flower decoration"
           width={120}
           height={120}

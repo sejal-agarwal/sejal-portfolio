@@ -1,6 +1,5 @@
 "use client";
 
-import { withBasePath } from "@/lib/base-path";
 import Image from "next/image";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
@@ -137,7 +136,7 @@ export function BlogPageContent({ posts, initialSlug }: BlogPageContentProps) {
                   ),
                   img: ({ src = "", alt = "" }) => (
                     <Image
-                      src={withBasePath(typeof src === "string" ? src : "")}
+                      src={typeof src === "string" ? src : ""}
                       alt={alt}
                       width={1200}
                       height={800}

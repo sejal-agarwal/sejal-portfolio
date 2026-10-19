@@ -1,4 +1,3 @@
-import { withBasePath } from "@/lib/base-path";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -50,7 +49,7 @@ export function Contact() {
             className="reveal-card group flex items-center gap-2 w-fit text-section-subheading hover-underline-primary"
           >
             <Image
-              src={withBasePath(link.icon)}
+              src={link.icon}
               alt=""
               width={link.iconSize}
               height={link.iconSize}

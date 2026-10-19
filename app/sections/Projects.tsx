@@ -1,4 +1,3 @@
-import { withBasePath } from "@/lib/base-path";
 import Image from "next/image";
 import { BentoCard } from "../components/BentoCard";
 import {
@@ -38,7 +37,7 @@ export function Projects() {
             className="rounded-[20px] h-full p-0 relative"
           >
             <Image
-              src={withBasePath("/hand writing.svg")}
+              src="/hand writing.svg"
               alt="Line drawing of a hand writing with a pen"
               fill
               className="object-contain object-center"
