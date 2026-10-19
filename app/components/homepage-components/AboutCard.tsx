@@ -1,3 +1,4 @@
+import { withBasePath } from "@/lib/base-path";
 import { BentoCard } from "../BentoCard";
 import Image from "next/image";
 
@@ -10,7 +11,7 @@ export function AboutCard() {
     >
       <div>
         <Image
-          src="/circle-icon.svg"
+          src={withBasePath("/circle-icon.svg")}
           alt="Decorative icon"
           width={38}
           height={38}

@@ -1,3 +1,4 @@
+import { withBasePath } from "@/lib/base-path";
 import Image from "next/image";
 import {
   ResearchProjectCard,
@@ -49,7 +50,7 @@ export function Research() {
 
           <div className="lg:col-span-5 relative min-h-[250px] lg:min-h-0">
             <Image
-              src="/books.png"
+              src={withBasePath("/books.png")}
               alt="Line drawing of a stack of books"
               fill
               className="object-contain object-center"

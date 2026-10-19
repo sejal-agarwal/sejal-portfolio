@@ -1,3 +1,4 @@
+import { withBasePath } from "@/lib/base-path";
 import { BentoCard } from "../BentoCard";
 import Image from "next/image";
 import Link from "next/link";
@@ -49,7 +50,7 @@ export function FeaturedCard() {
 
         <div className="flex justify-center mt-4 mb-2">
           <Image
-            src="/tulip-line-drawing.svg"
+            src={withBasePath("/tulip-line-drawing.svg")}
             alt="Tulip line drawing"
             width={160}
             height={190}

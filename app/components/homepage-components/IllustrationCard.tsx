@@ -1,3 +1,4 @@
+import { withBasePath } from "@/lib/base-path";
 import Image from "next/image";
 import { BentoCard } from "../BentoCard";
 
@@ -10,7 +11,7 @@ export function IllustrationCard() {
     >
       <div className="relative w-full h-full min-h-[350px] flex items-center justify-center">
         <Image
-          src="/woman-on-computer.svg"
+          src={withBasePath("/woman-on-computer.svg")}
           alt="Illustration of woman working on laptop"
           fill
           priority
